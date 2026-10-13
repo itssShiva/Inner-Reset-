@@ -73,6 +73,7 @@ export default function Navbar({ isDark, onToggleDark }) {
           </div>
         </a>
 
+
         {/* Nav Links */}
         <div className={`nav-links ${mobileOpen ? 'mobile open' : ''}`}>
           {NAV_LINKS.map((link) => (

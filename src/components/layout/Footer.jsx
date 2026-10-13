@@ -73,6 +73,8 @@ export default function Footer() {
           position: relative;
           z-index: 20;
           clear: both;
+          overflow: hidden;
+          box-sizing: border-box;
         }
 
         .dark .ir-site-footer,
@@ -82,6 +84,7 @@ export default function Footer() {
         }
 
         .ir-site-footer-inner {
+          width: 100%;
           max-width: 1120px;
           margin: 0 auto;
           padding: 48px 24px 40px;
@@ -90,6 +93,7 @@ export default function Footer() {
           align-items: center;
           text-align: center;
           gap: 24px;
+          box-sizing: border-box;
         }
 
         .ir-footer-brand {
