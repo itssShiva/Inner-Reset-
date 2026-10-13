@@ -668,57 +668,7 @@ export default function Products() {
       </div>
 
       {/* ─────────────────────────────────────────
-          3. WHAT IS INNER RESET?
-          ───────────────────────────────────────── */}
-      <section className="ir-what">
-        <div className="ir-wrap ir-text-center">
-          <div className="ir-eyebrow">
-            <Sparkles size={13} />
-            <span>What is Inner Reset?</span>
-          </div>
-          <h2 className="ir-h2">Meaningful change begins small</h2>
-          <p className="ir-lead ir-center-lead">
-            Inner Reset is a collection of simple everyday tools designed around intention,
-            gratitude, affirmations and conscious action.
-          </p>
-
-          <div className="ir-moments">
-            <div className="ir-moment-card">
-              <div className="ir-moment-icon">💧</div>
-              <h3 className="ir-moment-title">A Mindful Sip</h3>
-              <p className="ir-moment-desc">
-                Charging everyday hydration with cellular clarity and intention-guided life wellness.
-              </p>
-            </div>
-            <div className="ir-moment-card">
-              <div className="ir-moment-icon">📜</div>
-              <h3 className="ir-moment-title">A Written Decree</h3>
-              <p className="ir-moment-desc">
-                Putting pen to consecrated parchment to collapse subconscious doubt into tangible reality.
-              </p>
-            </div>
-            <div className="ir-moment-card">
-              <div className="ir-moment-icon">🤍</div>
-              <h3 className="ir-moment-title">Four Healing Words</h3>
-              <p className="ir-moment-desc">
-                Ancient Hawaiian Ho'oponopono forgiveness dissolving subconscious resistance wherever placed.
-              </p>
-            </div>
-            <div className="ir-moment-card">
-              <div className="ir-moment-icon">🪙</div>
-              <h3 className="ir-moment-title">A Conscious Surplus</h3>
-              <p className="ir-moment-desc">
-                Cultivating gratitude around everyday wealth flow so currency circulates freely back to you.
-              </p>
-            </div>
-          </div>
-
-          <div className="ir-big-accent">Pause. Intend. Reset.</div>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────
-          4. THE INNER RESET COLLECTION OVERVIEW
+          3. THE INNER RESET COLLECTION OVERVIEW
           ───────────────────────────────────────── */}
       <section id="collection" className="ir-collection-section">
         <div className="ir-wrap">
@@ -819,6 +769,56 @@ export default function Products() {
               </div>
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────
+          4. WHAT IS INNER RESET?
+          ───────────────────────────────────────── */}
+      <section className="ir-what">
+        <div className="ir-wrap ir-text-center">
+          <div className="ir-eyebrow">
+            <Sparkles size={13} />
+            <span>What is Inner Reset?</span>
+          </div>
+          <h2 className="ir-h2">Meaningful change begins small</h2>
+          <p className="ir-lead ir-center-lead">
+            Inner Reset is a collection of simple everyday tools designed around intention,
+            gratitude, affirmations and conscious action.
+          </p>
+
+          <div className="ir-moments">
+            <div className="ir-moment-card">
+              <div className="ir-moment-icon">💧</div>
+              <h3 className="ir-moment-title">A Mindful Sip</h3>
+              <p className="ir-moment-desc">
+                Charging everyday hydration with cellular clarity and intention-guided life wellness.
+              </p>
+            </div>
+            <div className="ir-moment-card">
+              <div className="ir-moment-icon">📜</div>
+              <h3 className="ir-moment-title">A Written Decree</h3>
+              <p className="ir-moment-desc">
+                Putting pen to consecrated parchment to collapse subconscious doubt into tangible reality.
+              </p>
+            </div>
+            <div className="ir-moment-card">
+              <div className="ir-moment-icon">🤍</div>
+              <h3 className="ir-moment-title">Four Healing Words</h3>
+              <p className="ir-moment-desc">
+                Ancient Hawaiian Ho'oponopono forgiveness dissolving subconscious resistance wherever placed.
+              </p>
+            </div>
+            <div className="ir-moment-card">
+              <div className="ir-moment-icon">🪙</div>
+              <h3 className="ir-moment-title">A Conscious Surplus</h3>
+              <p className="ir-moment-desc">
+                Cultivating gratitude around everyday wealth flow so currency circulates freely back to you.
+              </p>
+            </div>
+          </div>
+
+          <div className="ir-big-accent">Pause. Intend. Reset.</div>
         </div>
       </section>
 
