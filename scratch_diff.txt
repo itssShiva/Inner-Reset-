@@ -1,0 +1,617 @@
+﻿diff --git a/src/pages/Products.jsx b/src/pages/Products.jsx
+index 74591fa..4a549f6 100644
+--- a/src/pages/Products.jsx
++++ b/src/pages/Products.jsx
+@@ -668,57 +668,7 @@ export default function Products() {
+       </div>
+ 
+       {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+-          3. WHAT IS INNER RESET?
+-          ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
+-      <section className="ir-what">
+-        <div className="ir-wrap ir-text-center">
+-          <div className="ir-eyebrow">
+-            <Sparkles size={13} />
+-            <span>What is Inner Reset?</span>
+-          </div>
+-          <h2 className="ir-h2">Meaningful change begins small</h2>
+-          <p className="ir-lead ir-center-lead">
+-            Inner Reset is a collection of simple everyday tools designed around intention,
+-            gratitude, affirmations and conscious action.
+-          </p>
+-
+-          <div className="ir-moments">
+-            <div className="ir-moment-card">
+-              <div className="ir-moment-icon">≡ƒÆº</div>
+-              <h3 className="ir-moment-title">A Mindful Sip</h3>
+-              <p className="ir-moment-desc">
+-                Charging everyday hydration with cellular clarity and intention-guided life wellness.
+-              </p>
+-            </div>
+-            <div className="ir-moment-card">
+-              <div className="ir-moment-icon">≡ƒô£</div>
+-              <h3 className="ir-moment-title">A Written Decree</h3>
+-              <p className="ir-moment-desc">
+-                Putting pen to consecrated parchment to collapse subconscious doubt into tangible reality.
+-              </p>
+-            </div>
+-            <div className="ir-moment-card">
+-              <div className="ir-moment-icon">≡ƒñì</div>
+-              <h3 className="ir-moment-title">Four Healing Words</h3>
+-              <p className="ir-moment-desc">
+-                Ancient Hawaiian Ho'oponopono forgiveness dissolving subconscious resistance wherever placed.
+-              </p>
+-            </div>
+-            <div className="ir-moment-card">
+-              <div className="ir-moment-icon">≡ƒ¬Ö</div>
+-              <h3 className="ir-moment-title">A Conscious Surplus</h3>
+-              <p className="ir-moment-desc">
+-                Cultivating gratitude around everyday wealth flow so currency circulates freely back to you.
+-              </p>
+-            </div>
+-          </div>
+-
+-          <div className="ir-big-accent">Pause. Intend. Reset.</div>
+-        </div>
+-      </section>
+-
+-      {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+-          4. THE INNER RESET COLLECTION OVERVIEW
++          3. THE INNER RESET COLLECTION OVERVIEW
+           ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
+       <section id="collection" className="ir-collection-section">
+         <div className="ir-wrap">
+@@ -822,6 +772,56 @@ export default function Products() {
+         </div>
+       </section>
+ 
++      {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
++          4. WHAT IS INNER RESET?
++          ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
++      <section className="ir-what">
++        <div className="ir-wrap ir-text-center">
++          <div className="ir-eyebrow">
++            <Sparkles size={13} />
++            <span>What is Inner Reset?</span>
++          </div>
++          <h2 className="ir-h2">Meaningful change begins small</h2>
++          <p className="ir-lead ir-center-lead">
++            Inner Reset is a collection of simple everyday tools designed around intention,
++            gratitude, affirmations and conscious action.
++          </p>
++
++          <div className="ir-moments">
++            <div className="ir-moment-card">
++              <div className="ir-moment-icon">≡ƒÆº</div>
++              <h3 className="ir-moment-title">A Mindful Sip</h3>
++              <p className="ir-moment-desc">
++                Charging everyday hydration with cellular clarity and intention-guided life wellness.
++              </p>
++            </div>
++            <div className="ir-moment-card">
++              <div className="ir-moment-icon">≡ƒô£</div>
++              <h3 className="ir-moment-title">A Written Decree</h3>
++              <p className="ir-moment-desc">
++                Putting pen to consecrated parchment to collapse subconscious doubt into tangible reality.
++              </p>
++            </div>
++            <div className="ir-moment-card">
++              <div className="ir-moment-icon">≡ƒñì</div>
++              <h3 className="ir-moment-title">Four Healing Words</h3>
++              <p className="ir-moment-desc">
++                Ancient Hawaiian Ho'oponopono forgiveness dissolving subconscious resistance wherever placed.
++              </p>
++            </div>
++            <div className="ir-moment-card">
++              <div className="ir-moment-icon">≡ƒ¬Ö</div>
++              <h3 className="ir-moment-title">A Conscious Surplus</h3>
++              <p className="ir-moment-desc">
++                Cultivating gratitude around everyday wealth flow so currency circulates freely back to you.
++              </p>
++            </div>
++          </div>
++
++          <div className="ir-big-accent">Pause. Intend. Reset.</div>
++        </div>
++      </section>
++
+       {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+           5. PRODUCT 1: BLUE GLASS WATER BOTTLE
+           ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
+@@ -2174,7 +2174,7 @@ export default function Products() {
+           --ir-bg-alt: #f5efe4;
+           --ir-ink: var(--text-main, #14303F);
+           --ir-mute: var(--text-muted, #5d6f78);
+-          --ir-gold: var(--accent-gold, #B8935A);
++          --ir-gold: #966b24;
+           --ir-blue: #3F6E86;
+           --ir-card: var(--glass-surface, #ffffff);
+           --ir-line: rgba(20, 48, 63, 0.12);
+@@ -2186,6 +2186,8 @@ export default function Products() {
+           overflow-x: hidden;
+           line-height: 1.7;
+           width: 100%;
++          max-width: 100vw;
++          box-sizing: border-box;
+         }
+ 
+         .dark .ir-page, body.dark .ir-page {
+@@ -2193,7 +2195,7 @@ export default function Products() {
+           --ir-bg-alt: #131f26;
+           --ir-ink: var(--text-main, #F3EBDD);
+           --ir-mute: var(--text-muted, #9db0b9);
+-          --ir-gold: #e4c28d;
++          --ir-gold: #cca054;
+           --ir-blue: #60a5fa;
+           --ir-card: rgba(26, 50, 63, 0.85);
+           --ir-line: rgba(243, 235, 221, 0.14);
+@@ -2207,11 +2209,15 @@ export default function Products() {
+           line-height: 1.15;
+           color: var(--ir-ink);
+           letter-spacing: -0.015em;
++          overflow-wrap: break-word;
++          word-break: break-word;
+         }
+ 
+         .ir-h2 {
+-          font-size: clamp(32px, 5.2vw, 52px);
++          font-size: clamp(28px, 5.2vw, 52px);
+           margin-bottom: 18px;
++          overflow-wrap: break-word;
++          word-break: break-word;
+         }
+ 
+         .ir-eyebrow {
+@@ -2227,13 +2233,14 @@ export default function Products() {
+         }
+ 
+         .ir-eyebrow-light { color: #f3ebdd; }
+-        .ir-eyebrow-gold { color: #e4c28d; }
++        .ir-eyebrow-gold { color: var(--ir-gold); }
+ 
+         .ir-lead {
+           color: var(--ir-mute);
+           font-size: 1.05rem;
+           line-height: 1.8;
+           max-width: 580px;
++          overflow-wrap: break-word;
+         }
+ 
+         .ir-center-lead {
+@@ -2250,21 +2257,31 @@ export default function Products() {
+           font-size: 26px;
+           color: var(--ir-gold);
+           margin-bottom: 14px;
++          overflow-wrap: break-word;
+         }
+ 
+         .ir-big-accent {
+           font-family: 'Outfit', sans-serif;
+           font-style: italic;
+-          font-size: 32px;
++          font-size: clamp(24px, 4vw, 32px);
+           color: var(--ir-blue);
+           margin-top: 36px;
++          overflow-wrap: break-word;
+         }
+ 
+         /* ΓöÇΓöÇ Common Layout Container ΓöÇΓöÇ */
+         .ir-wrap {
++          width: 100%;
+           max-width: 1120px;
+           margin: 0 auto;
+           padding: 0 24px;
++          box-sizing: border-box;
++        }
++
++        @media (max-width: 640px) {
++          .ir-wrap {
++            padding: 0 16px;
++          }
+         }
+ 
+         section.ir-what,
+@@ -2573,6 +2590,15 @@ export default function Products() {
+           pointer-events: none;
+         }
+ 
++        @media (max-width: 640px) {
++          .ir-orb {
++            width: 200px;
++            height: 200px;
++            right: -30px;
++            top: -40px;
++          }
++        }
++
+         @keyframes ir-float {
+           50% { transform: translateY(-12px); }
+         }
+@@ -2586,6 +2612,10 @@ export default function Products() {
+           white-space: nowrap;
+           border-top: 1px solid var(--ir-line);
+           border-bottom: 1px solid var(--ir-line);
++          width: 100%;
++          max-width: 100vw;
++          position: relative;
++          box-sizing: border-box;
+         }
+ 
+         .ir-marq-track {
+@@ -2613,9 +2643,19 @@ export default function Products() {
+ 
+         .ir-moments {
+           display: grid;
+-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
++          grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+           gap: 16px;
+           margin: 44px 0 34px;
++          width: 100%;
++          box-sizing: border-box;
++        }
++
++        @media (max-width: 520px) {
++          .ir-moments {
++            grid-template-columns: 1fr;
++            gap: 12px;
++            margin: 28px 0 24px;
++          }
+         }
+ 
+         .ir-moment-card {
+@@ -2627,6 +2667,9 @@ export default function Products() {
+           border-radius: 16px;
+           transition: transform 0.4s, border-color 0.4s, box-shadow 0.4s;
+           color: var(--ir-ink);
++          box-sizing: border-box;
++          width: 100%;
++          min-width: 0;
+         }
+ 
+         .ir-moment-card:hover {
+@@ -2638,6 +2681,8 @@ export default function Products() {
+         /* ΓöÇΓöÇ 4. The Inner Reset Collection ΓöÇΓöÇ */
+         .ir-collection-section {
+           background: var(--ir-bg);
++          width: 100%;
++          overflow: hidden;
+         }
+ 
+         .ir-section-head {
+@@ -2648,6 +2693,16 @@ export default function Products() {
+           display: grid;
+           gap: 24px;
+           grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
++          width: 100%;
++          max-width: 100%;
++          box-sizing: border-box;
++        }
++
++        @media (max-width: 600px) {
++          .ir-collection-grid {
++            grid-template-columns: 1fr;
++            gap: 18px;
++          }
+         }
+ 
+         .ir-collection-card {
+@@ -2660,6 +2715,17 @@ export default function Products() {
+           display: flex;
+           flex-direction: column;
+           transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
++          width: 100%;
++          max-width: 100%;
++          min-width: 0;
++          box-sizing: border-box;
++        }
++
++        @media (max-width: 480px) {
++          .ir-collection-card {
++            padding: 18px 16px;
++            border-radius: 18px;
++          }
+         }
+ 
+         .ir-collection-card:hover {
+@@ -2679,6 +2745,8 @@ export default function Products() {
+           justify-content: center;
+           padding: 12px;
+           box-sizing: border-box;
++          width: 100%;
++          max-width: 100%;
+         }
+ 
+         .ir-card-image-wrap img {
+@@ -2707,17 +2775,21 @@ export default function Products() {
+           font-style: italic;
+           font-size: 20px;
+           line-height: 1.4;
++          box-sizing: border-box;
++          width: 100%;
+         }
+ 
+         .ir-card-title {
+           font-size: 24px;
+           margin-bottom: 8px;
++          overflow-wrap: break-word;
+         }
+ 
+         .ir-card-desc {
+           color: var(--ir-mute);
+           font-size: 0.95rem;
+           margin-bottom: 18px;
++          overflow-wrap: break-word;
+         }
+ 
+         .ir-card-link {
+@@ -2735,13 +2807,32 @@ export default function Products() {
+         /* ΓöÇΓöÇ 5, 6, 7, 8. Product Deep Dives ΓöÇΓöÇ */
+         .ir-prod-grid {
+           display: grid;
+-          gap: 48px;
++          grid-template-columns: minmax(0, 1fr);
++          gap: 36px;
+           align-items: start;
++          width: 100%;
++          max-width: 100%;
++          box-sizing: border-box;
++        }
++
++        .ir-gal {
++          width: 100%;
++          max-width: 100%;
++          min-width: 0;
++          box-sizing: border-box;
++        }
++
++        .ir-prod-info {
++          width: 100%;
++          max-width: 100%;
++          min-width: 0;
++          box-sizing: border-box;
+         }
+ 
+         @media (min-width: 860px) {
+           .ir-prod-grid {
+-            grid-template-columns: 1fr 1fr;
++            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
++            gap: 48px;
+           }
+           .ir-prod-grid-rev .ir-gal {
+             order: 2;
+@@ -3962,25 +4053,28 @@ export default function Products() {
+           }
+           .ir-combo-cta-group {
+             display: flex;
+-            flex-direction: row;
+-            align-items: center;
+-            justify-content: center;
++            flex-direction: column;
++            align-items: stretch;
+             gap: 10px;
+             width: 100%;
+-            flex-wrap: nowrap;
+           }
+           .ir-combo-cta-group .ir-combo-add-both-btn {
+-            flex: 1 1 auto;
++            width: 100%;
+             justify-content: center;
+-            font-size: 0.85rem;
+-            padding: 11px 16px;
+-            white-space: nowrap;
++            font-size: 0.88rem;
++            padding: 13px 18px;
++            white-space: normal;
++            text-align: center;
++            box-sizing: border-box;
+           }
+           .ir-combo-cta-group .ir-btn-outline-ritual {
+-            flex: 0 0 auto;
+-            font-size: 0.85rem;
+-            padding: 11px 16px;
+-            white-space: nowrap;
++            width: 100%;
++            justify-content: center;
++            font-size: 0.88rem;
++            padding: 12px 18px;
++            white-space: normal;
++            text-align: center;
++            box-sizing: border-box;
+           }
+         }
+ 
+@@ -4276,6 +4370,21 @@ export default function Products() {
+           justify-content: space-between;
+           padding-top: 12px;
+           border-top: 1px dashed var(--ir-line);
++          flex-wrap: wrap;
++          gap: 8px;
++        }
++
++        .ir-card-link {
++          margin-top: auto;
++          display: inline-flex;
++          align-items: center;
++          gap: 6px;
++          font-size: 11px;
++          letter-spacing: 0.18em;
++          text-transform: uppercase;
++          font-weight: 700;
++          color: var(--ir-gold);
++          white-space: nowrap;
+         }
+ 
+         .ir-card-price-display {
+@@ -4333,6 +4442,21 @@ export default function Products() {
+           transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+         }
+ 
++        @media (max-width: 600px) {
++          .ir-floating-bag {
++            bottom: 18px;
++            right: 14px;
++            padding: 8px 14px 8px 10px;
++            gap: 8px;
++          }
++          .ir-floating-bag-label {
++            font-size: 0.78rem;
++          }
++          .ir-floating-bag-sub {
++            font-size: 0.7rem;
++          }
++        }
++
+         .ir-floating-bag:hover {
+           transform: translateY(-3px) scale(1.03);
+           box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+@@ -5055,9 +5179,16 @@ export default function Products() {
+           border-radius: 99px;
+           padding: 4px;
+           margin: 16px 0 14px;
+-          width: fit-content;
++          width: 100%;
+           max-width: 100%;
+           overflow-x: auto;
++          -webkit-overflow-scrolling: touch;
++          scrollbar-width: none;
++          box-sizing: border-box;
++        }
++
++        .ir-segment-tabs::-webkit-scrollbar {
++          display: none;
+         }
+ 
+         .ir-seg-btn {
+@@ -5075,6 +5206,7 @@ export default function Products() {
+           display: inline-flex;
+           align-items: center;
+           gap: 6px;
++          flex-shrink: 0;
+         }
+ 
+         .ir-seg-btn:hover {
+@@ -5101,6 +5233,11 @@ export default function Products() {
+           min-height: 200px;
+           box-shadow: 0 4px 20px -6px rgba(20, 48, 63, 0.04);
+           animation: ir-tab-fade 0.3s ease-out;
++          width: 100%;
++          max-width: 100%;
++          box-sizing: border-box;
++          overflow-wrap: break-word;
++          word-break: break-word;
+         }
+ 
+         @keyframes ir-tab-fade {
+@@ -5140,7 +5277,9 @@ export default function Products() {
+           border: 1px solid var(--ir-line);
+           border-radius: 18px;
+           box-shadow: 0 4px 16px -4px rgba(20, 48, 63, 0.05);
++          width: 100%;
+           max-width: 100%;
++          box-sizing: border-box;
+         }
+ 
+         .ir-commerce-panel .ir-price-group {
+@@ -5174,11 +5313,12 @@ export default function Products() {
+         .ir-commerce-panel .ir-action-bar {
+           display: inline-flex;
+           flex-direction: row;
+-          flex-wrap: nowrap;
++          flex-wrap: wrap;
+           gap: 12px;
+           align-items: center;
+           margin-top: 0;
+           margin-left: 0;
++          max-width: 100%;
+         }
+ 
+         .ir-commerce-panel .ir-qty-box {
+@@ -5186,31 +5326,70 @@ export default function Products() {
+         }
+ 
+         .ir-commerce-panel .ir-add-bag-btn {
+-          flex: 0 0 auto;
+-          white-space: nowrap;
++          flex: 1 1 auto;
++          min-width: 0;
++          max-width: 100%;
++          white-space: normal;
++          text-align: center;
++          padding: 13px 20px;
++          font-size: 11px;
++          letter-spacing: 0.1em;
++          line-height: 1.3;
++          box-sizing: border-box;
+         }
+ 
+         @media (max-width: 640px) {
+           .ir-commerce-panel {
+             display: flex;
+             flex-direction: column;
+-            align-items: flex-start;
++            align-items: stretch;
+             gap: 14px;
+-            padding: 14px;
++            padding: 14px 12px;
++            width: 100%;
++            box-sizing: border-box;
++          }
++          .ir-commerce-panel .ir-price-group {
+             width: 100%;
++            justify-content: flex-start;
+           }
+           .ir-commerce-panel .ir-action-bar {
+             display: flex;
+             flex-direction: row;
+-            flex-wrap: nowrap;
++            flex-wrap: wrap;
+             align-items: center;
+             margin-left: 0;
+             width: 100%;
+             gap: 10px;
+           }
++          .ir-commerce-panel .ir-qty-box {
++            flex: 0 0 auto;
++          }
+           .ir-commerce-panel .ir-add-bag-btn {
+-            flex: 1;
+-            white-space: nowrap;
++            flex: 1 1 180px;
++            min-width: 0;
++            max-width: 100%;
++            white-space: normal;
++            text-align: center;
++            padding: 12px 14px;
++            font-size: 11px;
++            letter-spacing: 0.08em;
++            line-height: 1.35;
++            box-sizing: border-box;
++          }
++        }
++
++        @media (max-width: 440px) {
++          .ir-commerce-panel .ir-action-bar {
++            flex-direction: column;
++            align-items: stretch;
++            gap: 10px;
++          }
++          .ir-commerce-panel .ir-qty-box {
++            align-self: flex-start;
++          }
++          .ir-commerce-panel .ir-add-bag-btn {
++            width: 100%;
++            flex: 0 0 auto;
+           }
+         }
+ 
+@@ -5397,6 +5576,10 @@ export default function Products() {
+           display: flex;
+           flex-direction: column;
+           text-align: left;
++          width: 100%;
++          max-width: 100%;
++          min-width: 0;
++          box-sizing: border-box;
+         }
+ 
+         .ir-moment-icon {

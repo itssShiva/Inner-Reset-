@@ -139,6 +139,33 @@ const PRODUCTS_DATA = [
     ],
     collectionDesc: 'A little card for the things your heart truly wishes for.',
   },
+  {
+    id: 'journal',
+    hash: 'journal',
+    name: 'Inner Reset Gratitude Journal',
+    shortName: 'Gratitude Journal',
+    price: null,
+    isComingSoon: true,
+    eyebrow: '📖 Inner Reset · Coming Soon',
+    tag: 'Anchor Your Daily Blessings.',
+    subtitle: 'A dedicated sacred sanctuary for heartfelt gratitude, reflection, and mindful intention.',
+    lead1: 'True transformation begins by recognizing the abundance already flowing into your life.',
+    lead2: 'Designed with golden guided prompts, weekly reflection rituals, and consecrated affirmations to elevate your emotional baseline.',
+    pills: ['MORNING GRATITUDE', 'EVENING REFLECTION', 'AFFIRMATION PRACTICE', 'INNER PEACE'],
+    steps: ['Open.', 'Breathe.', 'Write 3 Blessings.', 'Feel Joy.', 'Integrate.'],
+    features: [
+      'Hardcover vegan linen with embossed gold foil Shaifaly Healer insignia.',
+      '100gsm acid-free bleedproof pages with silk ribbon marker.',
+      'Daily morning & evening gratitude prompts curated by Shaifaly Sangal.',
+      'Weekly alignment check-ins to dissolve subconscious anxiety and anchor emotional abundance.',
+    ],
+    cycle: 'PAUSE • APPRECIATE • WRITE • SHIFT • EXPAND',
+    highlighted: '/images/products/gratitude-journal/gratitude-journal.jpg',
+    images: [
+      '/images/products/gratitude-journal/gratitude-journal.jpg',
+    ],
+    collectionDesc: 'A consecrated daily sanctuary for gratitude and intention. Launching soon.',
+  },
 ];
 
 /* ─────────────────────────────────────────
@@ -377,12 +404,14 @@ export default function Products() {
     acrylic: 0,
     moneybox: 0,
     card: 0,
+    journal: 0,
   });
   const [mediaModes, setMediaModes] = useState({
     bottle: 'image',
     acrylic: 'image',
     moneybox: 'image',
     card: 'image',
+    journal: 'image',
   });
 
   // Quantities for each product
@@ -391,6 +420,7 @@ export default function Products() {
     acrylic: 1,
     moneybox: 1,
     card: 1,
+    journal: 1,
   });
 
   // Interactive Stitch ritual tab for each product ('ritual' | 'pillars' | 'craft')
@@ -399,7 +429,11 @@ export default function Products() {
     acrylic: 'words',
     moneybox: 'affirmation',
     card: 'manifest',
+    journal: 'sanctuary',
   });
+
+  // Waitlist notification state for coming soon products
+  const [notifiedJournal, setNotifiedJournal] = useState(false);
 
   const handleSetProductTab = (productId, tabKey) => {
     setActiveProductTabs((prev) => ({ ...prev, [productId]: tabKey }));
@@ -766,6 +800,29 @@ export default function Products() {
               <div className="ir-card-footer">
                 <span className="ir-card-price-display">₹{PRODUCTS_DATA[3].price}</span>
                 <span className="ir-card-link">Explore Ritual <ArrowRight size={14} /></span>
+              </div>
+            </a>
+
+            {/* Card 5: Gratitude Journal (Coming Soon) */}
+            <a
+              href="#journal"
+              onClick={(e) => { e.preventDefault(); handleScrollTo('journal'); }}
+              className="ir-collection-card ir-collection-card-soon"
+            >
+              <div className="ir-card-image-wrap">
+                <img
+                  src={PRODUCTS_DATA[4].highlighted}
+                  alt={PRODUCTS_DATA[4].name}
+                  loading="lazy"
+                />
+                <span className="ir-card-soon-pill">✦ COMING SOON</span>
+              </div>
+              <div className="ir-card-eyebrow-mini">Inner Reset · Future Ritual</div>
+              <h3 className="ir-card-title">{PRODUCTS_DATA[4].name}</h3>
+              <p className="ir-card-desc">{PRODUCTS_DATA[4].collectionDesc}</p>
+              <div className="ir-card-footer">
+                <span className="ir-card-soon-badge">Coming Soon</span>
+                <span className="ir-card-link">Preview Ritual <ArrowRight size={14} /></span>
               </div>
             </a>
           </div>
@@ -1524,6 +1581,153 @@ export default function Products() {
                 <p className="ir-quote-lead">
                   Write what you are choosing to welcome into your life across health, relationships, career, or financial abundance.
                 </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────
+          8B. PRODUCT 5: INNER RESET GRATITUDE JOURNAL (COMING SOON)
+          ───────────────────────────────────────── */}
+      <section id="journal" className="ir-prod-section">
+        <div className="ir-wrap ir-prod-grid">
+          {/* Gallery Column */}
+          <div className="ir-gal">
+            <div className="ir-gal-main ir-main-square ir-card-visual-box">
+              <div className="ir-img-zoom-wrap">
+                <img
+                  src={PRODUCTS_DATA[4].highlighted}
+                  alt={`${PRODUCTS_DATA[4].name} preview`}
+                  className="ir-main-img"
+                  style={{ objectFit: 'cover' }}
+                />
+                <button
+                  type="button"
+                  className="ir-zoom-btn"
+                  onClick={() => setLightbox({ productId: 'journal', imageIndex: 0 })}
+                  aria-label="Enlarge image"
+                >
+                  <Maximize2 size={16} />
+                </button>
+              </div>
+            </div>
+
+            <div className="ir-cyc-badge" style={{ marginTop: 14 }}>
+              {PRODUCTS_DATA[4].cycle}
+            </div>
+          </div>
+
+          {/* Product Details Column */}
+          <div className="ir-prod-info">
+            <div className="ir-eyebrow">
+              <Sparkles size={13} />
+              <span>{PRODUCTS_DATA[4].eyebrow}</span>
+            </div>
+            <h2 className="ir-h2">{PRODUCTS_DATA[4].name}</h2>
+            <p className="ir-tag">{PRODUCTS_DATA[4].tag}</p>
+
+            <p className="ir-lead" style={{ marginBottom: 12 }}>
+              {PRODUCTS_DATA[4].subtitle}
+            </p>
+            <p className="ir-quote-lead" style={{ marginBottom: 20 }}>
+              {PRODUCTS_DATA[4].lead2}
+            </p>
+
+            {/* Exclusive Coming Soon Commerce Status Banner */}
+            <div className="ir-commerce-panel ir-commerce-panel-soon">
+              <div className="ir-price-group">
+                <span className="ir-coming-soon-badge">✦ COMING SOON</span>
+                <span className="ir-coming-soon-sub">Expected Late 2026</span>
+              </div>
+              <div className="ir-action-bar">
+                <button
+                  type="button"
+                  className={`ir-btn ${notifiedJournal ? 'ir-btn-notified' : 'ir-btn-solid'} ir-add-bag-btn`}
+                  onClick={() => setNotifiedJournal(true)}
+                >
+                  <Sparkles size={15} />
+                  {notifiedJournal ? '✓ You Are On The Waitlist!' : 'Notify Me When Launched'}
+                </button>
+              </div>
+            </div>
+
+            {/* Interactive Ritual Segmented Control */}
+            <div className="ir-segment-tabs" role="tablist" aria-label="Gratitude journal details tabs">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeProductTabs.journal === 'sanctuary'}
+                className={`ir-seg-btn ${activeProductTabs.journal === 'sanctuary' ? 'active' : ''}`}
+                onClick={() => handleSetProductTab('journal', 'sanctuary')}
+              >
+                <span className="ir-seg-dot">✨</span> The Sanctuary
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeProductTabs.journal === 'ritual'}
+                className={`ir-seg-btn ${activeProductTabs.journal === 'ritual' ? 'active' : ''}`}
+                onClick={() => handleSetProductTab('journal', 'ritual')}
+              >
+                <span className="ir-seg-dot">📝</span> Daily Ritual
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={activeProductTabs.journal === 'features'}
+                className={`ir-seg-btn ${activeProductTabs.journal === 'features' ? 'active' : ''}`}
+                onClick={() => handleSetProductTab('journal', 'features')}
+              >
+                <span className="ir-seg-dot">✦</span> Sacred Craft
+              </button>
+            </div>
+
+            {/* Active Tab Panel */}
+            {activeProductTabs.journal === 'sanctuary' && (
+              <div className="ir-tab-content-panel" role="tabpanel" style={{ textAlign: 'center' }}>
+                <p className="ir-quote-tag" style={{ color: 'var(--ir-gold)', fontSize: '1.22rem', margin: '4px 0 8px' }}>
+                  “Where Gratitude Becomes a Living Frequency.”
+                </p>
+                <p className="ir-quote-lead" style={{ maxWidth: 460, margin: '0 auto 12px' }}>
+                  {PRODUCTS_DATA[4].lead1}
+                </p>
+                <div className="ir-pills" style={{ margin: '14px 0 6px', justifyContent: 'center' }}>
+                  {PRODUCTS_DATA[4].pills.map((pill) => (
+                    <span key={pill}>✦ {pill}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {activeProductTabs.journal === 'ritual' && (
+              <div className="ir-tab-content-panel" role="tabpanel">
+                <span className="ir-block-label">5-Step Daily Alignment</span>
+                <div className="ir-stepper-grid" style={{ marginBottom: 14 }}>
+                  {PRODUCTS_DATA[4].steps.map((st, i) => (
+                    <div key={st} className="ir-step-item">
+                      <span className="ir-step-circle">{i + 1}</span>
+                      <span className="ir-step-name">{st}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="ir-quote-lead">
+                  Every page guides you into coherence before pen meets parchment. A tranquil 5-minute morning anchor and evening release.
+                </p>
+              </div>
+            )}
+
+            {activeProductTabs.journal === 'features' && (
+              <div className="ir-tab-content-panel" role="tabpanel">
+                <span className="ir-block-label">Artisan Specifications</span>
+                <div className="ir-feat-grid" style={{ margin: 0, border: 'none', paddingTop: 4 }}>
+                  {PRODUCTS_DATA[4].features.map((feat) => (
+                    <div key={feat} className="ir-feat-cell">
+                      <span className="ir-feat-star">✦</span>
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -2831,7 +3035,7 @@ export default function Products() {
 
         @media (min-width: 860px) {
           .ir-prod-grid {
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            grid-template-columns: 1fr 1fr;
             gap: 48px;
           }
           .ir-prod-grid-rev .ir-gal {
@@ -5179,7 +5383,7 @@ export default function Products() {
           border-radius: 99px;
           padding: 4px;
           margin: 16px 0 14px;
-          width: 100%;
+          width: fit-content;
           max-width: 100%;
           overflow-x: auto;
           -webkit-overflow-scrolling: touch;
@@ -5230,7 +5434,7 @@ export default function Products() {
           border: 1px solid var(--ir-line);
           border-radius: 18px;
           padding: 20px 22px;
-          min-height: 200px;
+          min-height: 180px;
           box-shadow: 0 4px 20px -6px rgba(20, 48, 63, 0.04);
           animation: ir-tab-fade 0.3s ease-out;
           width: 100%;
@@ -5238,6 +5442,8 @@ export default function Products() {
           box-sizing: border-box;
           overflow-wrap: break-word;
           word-break: break-word;
+          display: flex;
+          flex-direction: column;
         }
 
         @keyframes ir-tab-fade {
@@ -5268,16 +5474,16 @@ export default function Products() {
         /* ── Stitch Atelier: Unified Commerce Panel ── */
         .ir-commerce-panel {
           display: inline-flex;
-          align-items: center;
-          gap: 16px;
-          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 14px;
           margin: 14px 0 20px;
-          padding: 10px 18px;
+          padding: 14px 18px;
           background: var(--ir-card);
           border: 1px solid var(--ir-line);
           border-radius: 18px;
           box-shadow: 0 4px 16px -4px rgba(20, 48, 63, 0.05);
-          width: 100%;
+          width: fit-content;
           max-width: 100%;
           box-sizing: border-box;
         }
@@ -5313,12 +5519,12 @@ export default function Products() {
         .ir-commerce-panel .ir-action-bar {
           display: inline-flex;
           flex-direction: row;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
           gap: 12px;
           align-items: center;
           margin-top: 0;
           margin-left: 0;
-          max-width: 100%;
+          width: auto;
         }
 
         .ir-commerce-panel .ir-qty-box {
@@ -5326,12 +5532,10 @@ export default function Products() {
         }
 
         .ir-commerce-panel .ir-add-bag-btn {
-          flex: 1 1 auto;
-          min-width: 0;
-          max-width: 100%;
-          white-space: normal;
+          flex: 0 0 auto;
+          white-space: nowrap;
           text-align: center;
-          padding: 13px 20px;
+          padding: 13px 22px;
           font-size: 11px;
           letter-spacing: 0.1em;
           line-height: 1.3;
@@ -5451,22 +5655,22 @@ export default function Products() {
 
         .ir-stepper-grid {
           display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 6px;
-          margin-top: 6px;
-          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          margin-top: 8px;
+          width: 100%;
         }
 
         .ir-step-item {
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 10px;
         }
 
         .ir-step-circle {
-          width: 22px;
-          height: 22px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           background: var(--ir-ink);
           color: var(--ir-bg);
@@ -5475,21 +5679,22 @@ export default function Products() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
+          flex-shrink: 0;
         }
 
         .ir-step-name {
-          font-size: 0.82rem;
+          font-size: 0.85rem;
           font-weight: 700;
           color: var(--ir-ink);
           text-transform: uppercase;
           letter-spacing: 0.04em;
         }
 
-        /* ── 2-Column Features Grid ── */
+        /* ── Features List (Vertical in desktop view) ── */
         .ir-feat-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-          gap: 8px 14px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           margin: 14px 0 18px;
           padding-top: 12px;
           border-top: 1px solid var(--ir-line);
@@ -5509,6 +5714,14 @@ export default function Products() {
           font-size: 0.75rem;
           line-height: 1.6;
           flex-shrink: 0;
+        }
+
+        .ir-tab-content-panel .ir-pills {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          margin: 8px 0 14px;
         }
 
         /* ── Hero Metrics Row ── */
@@ -5614,6 +5827,83 @@ export default function Products() {
           transform: translateY(-5px);
           border-color: var(--ir-gold);
           box-shadow: 0 12px 30px -8px rgba(184, 147, 90, 0.18);
+        }
+
+        /* ── Coming Soon Products & Badges ── */
+        .ir-card-soon-pill {
+          position: absolute;
+          top: 14px;
+          right: 14px;
+          background: rgba(184, 147, 90, 0.95);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          color: #ffffff;
+          font-size: 10px;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          padding: 6px 12px;
+          border-radius: 99px;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          z-index: 2;
+        }
+
+        .ir-card-eyebrow-mini {
+          font-size: 10px;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+          color: var(--ir-gold);
+          font-weight: 700;
+          margin-bottom: 4px;
+        }
+
+        .ir-card-soon-badge {
+          font-family: 'Outfit', sans-serif;
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--ir-gold);
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .ir-commerce-panel-soon {
+          background: rgba(184, 147, 90, 0.06);
+          border-color: rgba(184, 147, 90, 0.25);
+        }
+
+        .ir-coming-soon-badge {
+          font-family: 'Outfit', sans-serif;
+          font-size: 1.35rem;
+          font-weight: 800;
+          color: var(--ir-gold);
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+        }
+
+        .ir-coming-soon-sub {
+          font-size: 0.76rem;
+          font-weight: 700;
+          color: var(--ir-mute);
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          padding: 4px 10px;
+          border-radius: 99px;
+          background: rgba(20, 48, 63, 0.06);
+          border: 1px solid var(--ir-line);
+        }
+
+        .dark .ir-coming-soon-sub {
+          background: rgba(255, 255, 255, 0.08);
+          color: var(--ir-mute);
+        }
+
+        .ir-btn-notified {
+          background: #16a34a !important;
+          color: #ffffff !important;
+          border-color: #16a34a !important;
+          box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3) !important;
+          cursor: default;
         }
       `}</style>
     </div>
