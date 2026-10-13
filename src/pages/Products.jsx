@@ -2174,7 +2174,7 @@ export default function Products() {
           --ir-bg-alt: #f5efe4;
           --ir-ink: var(--text-main, #14303F);
           --ir-mute: var(--text-muted, #5d6f78);
-          --ir-gold: var(--accent-gold, #B8935A);
+          --ir-gold: #966b24;
           --ir-blue: #3F6E86;
           --ir-card: var(--glass-surface, #ffffff);
           --ir-line: rgba(20, 48, 63, 0.12);
@@ -2195,7 +2195,7 @@ export default function Products() {
           --ir-bg-alt: #131f26;
           --ir-ink: var(--text-main, #F3EBDD);
           --ir-mute: var(--text-muted, #9db0b9);
-          --ir-gold: #e4c28d;
+          --ir-gold: #cca054;
           --ir-blue: #60a5fa;
           --ir-card: rgba(26, 50, 63, 0.85);
           --ir-line: rgba(243, 235, 221, 0.14);
@@ -2233,7 +2233,7 @@ export default function Products() {
         }
 
         .ir-eyebrow-light { color: #f3ebdd; }
-        .ir-eyebrow-gold { color: #e4c28d; }
+        .ir-eyebrow-gold { color: var(--ir-gold); }
 
         .ir-lead {
           color: var(--ir-mute);
